@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+            html, body {
+                background-color: #E5E7E9;
+                color: black !important;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin-top: 20px;
+
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+            .form-container {
+                border:1px solid grey;
+                border-radius: 5px;
+                margin-top:70px;
+                margin-bottom: 100px;
+                padding:0;
+                background-color: #F2F4F4;
+            }
+            .form-head {
+                /* border: 1px solid grey; */
+                border-radius: 5px;
+                margin: 0 ;
+                padding: 5px;
+            }
+            .form-group {
+                margin:10px;
+            }
+            .home-header {
+                background-color: white;
+                margin-bottom: 20px;
+            }
+            .heading-text {
+                margin: 10px;
+            }
+            .header {
+                background-color: #F2F4F4;
+                height : 600px;
+                margin:0 ;
+            }
+
+            .banner {
+                background-image: url("/images/powerline.jpg");
+                background-color: #ffffff;
+                height: 400px;
+                margin: 0;
+                padding: 50px;
+                display: block;
+                flex-flow: row wrap;
+                justify-content: space-around;
+            }
+            .img-circle{
+                background-color:red;
+            }
+            .footer{
+                margin: 0;
+                padding: 2px 10px 2px 10px;
+                background-color: white;
+            }
+            .banner-logo {
+                font-size: 5em;
+            }
+            .contain{
+                margin: 10px 0px 0px 0px;
+                padding: 30px;
+            }
+
+           .marketing {
+                justify-content: center;
+                padding: 0;
+                flex-flow: row wrap;
+                justify-content: space-around;
+           }
+        </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            @include('inc.header')
+        </header>
+        <div class="contain row">
+            @yield('content')
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
+</html>
